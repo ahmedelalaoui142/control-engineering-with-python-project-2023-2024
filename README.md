@@ -6,7 +6,7 @@
 
 Teams dashboards: [📝 google sheet](https://docs.google.com/spreadsheets/d/1bIvdzbg5PDoQSr7ugv32wQtcKUiNaBiPt2RSzHwNRtA/edit?usp=sharing)
 
-Your team: group number 9
+Your team:  9
 
   - Student 1:  Hamza Chibi `therealbabyblue`
 
