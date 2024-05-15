@@ -8,9 +8,9 @@ Teams dashboards: [📝 google sheet](https://docs.google.com/spreadsheets/d/1bI
 
 Your team: group number ❔
 
-  - Student 1: ❔ (Hamza Chibi `therealbabyblue`)
+  - Student 1: ❔ Hamza Chibi `therealbabyblue`
 
-  - Student 2: ❔ (Aala Eddine Maggouri `aala-emines`)
+  - Student 2: ❔ Aala Eddine Maggouri `aala-emines`
   
   - Student 3: 9 Ahmed EL ALAOUI `ahmedelalaoui142`
 
