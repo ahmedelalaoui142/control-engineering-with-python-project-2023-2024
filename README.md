@@ -14,7 +14,7 @@ Your team: group number ❔
   
   - Student 3: 9 Ahmed EL ALAOUI `ahmedelalaoui142`
 
-  - Student 4: ❔ (given name + first name + `github user name`, for example Sébastien Boisgérault `boisgera`)
+  - Student 4: ❔ Oussama OUMOULID `Oussama-Oumoulid` 
 
 ## Getting Started
 
