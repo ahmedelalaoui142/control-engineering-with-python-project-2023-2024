@@ -6,15 +6,15 @@
 
 Teams dashboards: [📝 google sheet](https://docs.google.com/spreadsheets/d/1bIvdzbg5PDoQSr7ugv32wQtcKUiNaBiPt2RSzHwNRtA/edit?usp=sharing)
 
-Your team: group number ❔
+Your team: group number 9
 
-  - Student 1: ❔ Hamza Chibi `therealbabyblue`
+  - Student 1:  Hamza Chibi `therealbabyblue`
 
-  - Student 2: ❔ Aala Eddine Maggouri `aala-emines`
+  - Student 2:  Aala Eddine Maggouri `aala-emines`
   
-  - Student 3: 9 Ahmed EL ALAOUI `ahmedelalaoui142`
+  - Student 3:  Ahmed EL ALAOUI `ahmedelalaoui142`
 
-  - Student 4: ❔ Oussama OUMOULID `Oussama-Oumoulid` 
+  - Student 4:  Oussama OUMOULID `Oussama-Oumoulid` 
 
 ## Getting Started
 
