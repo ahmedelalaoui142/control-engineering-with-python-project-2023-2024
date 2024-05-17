@@ -1806,25 +1806,12 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 91,
+      "execution_count": 113,
       "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "ChZNyC4Csqk2",
-        "outputId": "1d81e2d4-0ecd-4942-c163-8ac457fd8bd4"
+        "id": "ChZNyC4Csqk2"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Total cost J over the time horizon [0, tf]: 3.444867836640186\n"
-          ]
-        }
-      ],
+      "outputs": [],
       "source": [
-        "import numpy as np\n",
         "from scipy.integrate import quad\n",
         "from scipy.linalg import expm\n",
         "\n",
@@ -1832,14 +1819,11 @@
         "q1, q2, q3, r1, r2 = 1, 1, 1, 1, 1  # from next question\n",
         "Q = np.diag([q1, q2, q3])\n",
         "R0 = np.diag([r1, r2])\n",
-        "\n",
-        "# Define the initial state and final time\n",
-        "initial_state = np.array([0, 2, 0])  # Example initial conditions\n",
-        "tf = 20\n",
+        "poles = [-0.6, -0.7, -0.8] # keeping same one\n",
         "\n",
         "# Control law (for simplicity, assume some constant control that depends linearly on state)\n",
         "def control_law(t, deltaX):\n",
-        "    place_poles(A, B, poles).gain_matrix  # using latest poles\n",
+        "    k = place_poles(A, B, poles).gain_matrix  # using latest poles\n",
         "    return -K @ deltaX\n",
         "\n",
         "# Dynamics of the system (linearized)\n",
@@ -1851,11 +1835,7 @@
         "def integrand(t):\n",
         "    deltaX, delta_omega = system_dynamics(t, expm(A * t) @ initial_state)\n",
         "    cost = deltaX.T @ Q @ deltaX + delta_omega.T @ R0 @ delta_omega\n",
-        "    return np.sum(cost)\n",
-        "\n",
-        "# Compute the integral of the cost function\n",
-        "total_cost, _ = quad(integrand, 0, tf)\n",
-        "print(\"Total cost J over the time horizon [0, tf]:\", total_cost)\n"
+        "    return np.sum(cost)"
       ]
     },
     {
@@ -1869,13 +1849,31 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 69,
+      "execution_count": 116,
       "metadata": {
-        "id": "J4pZF62Msqk2"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J4pZF62Msqk2",
+        "outputId": "5c89807d-60ea-4716-8ba1-585342c99826"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total cost J over the time horizon [0, 20]: 15.541230597725978\n"
+          ]
+        }
+      ],
       "source": [
-        "pass"
+        "# Define the initial state and final time\n",
+        "initial_state = np.array([0, 2, 0])  # Example initial conditions\n",
+        "tf = 20\n",
+        "\n",
+        "# Compute the integral of the cost function\n",
+        "total_cost, _ = quad(integrand, 0, tf)\n",
+        "print(\"Total cost J over the time horizon [0, 20]:\", total_cost)\n"
       ]
     },
     {
@@ -1889,12 +1887,42 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 69,
+      "execution_count": 117,
       "metadata": {
-        "id": "z10S5W_Rsqk3"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "z10S5W_Rsqk3",
+        "outputId": "185890c2-39fe-4c4e-a2e6-093b5a9e708f"
       },
-      "outputs": [],
-      "source": []
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total cost J over the time horizon [0, 20]: 15.541230597725978\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Define the initial state and final time\n",
+        "initial_state = np.array([0, 2, 0])  # Example initial conditions\n",
+        "tf = 20\n",
+        "poles = [-6, -7, -8]\n",
+        "# Compute the integral of the cost function\n",
+        "total_cost, _ = quad(integrand, 0, tf)\n",
+        "print(\"Total cost J over the time horizon [0, 20]:\", total_cost)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Same cost.\n",
+        "We may conclude that J is"
+      ],
+      "metadata": {
+        "id": "CkKPQs-88LIM"
+      }
     },
     {
       "cell_type": "markdown",
